@@ -1,16 +1,20 @@
 #include "Application.h"
 
-namespace Hazard {
+namespace Hazard 
+{
 	
-	Application::Application() {
+	Application::Application() 
+	{
 
 	}
 
-	Application::~Application() {
+	Application::~Application() 
+	{
 
 	}
 
-	void Application::Run() {
+	void Application::Run() 
+	{
 		while (true);
 	}
 }

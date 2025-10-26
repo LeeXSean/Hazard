@@ -1,9 +1,11 @@
 #pragma once
-#include "core.h"
+#include "Core.h"
 
-namespace Hazard {
+namespace Hazard 
+{
 
-	class HZ_API Application {
+	class HZ_API Application 
+	{
 	public:
 		Application();
 		virtual ~Application();

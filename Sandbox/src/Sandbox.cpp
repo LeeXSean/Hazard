@@ -1,6 +1,7 @@
 #include "Hazard.h"
 
-class Sandbox : public Hazard::Application {
+class Sandbox : public Hazard::Application 
+{
 public:
 	Sandbox() {
 	
@@ -12,6 +13,7 @@ public:
 
 };
 
-Hazard::Application* Hazard::CreateApplication() {
+Hazard::Application* Hazard::CreateApplication() 
+{
 	return new Sandbox();
 }
