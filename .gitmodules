@@ -4,3 +4,6 @@
 [submodule "Hazard/vendor/GLFW"]
 	path = Hazard/vendor/GLFW
 	url = https://github.com/glfw/glfw
+[submodule "GLFW"]
+	path = Hazard/vendor/GLFW
+	url = https://github.com/LeeXSean/glfw
