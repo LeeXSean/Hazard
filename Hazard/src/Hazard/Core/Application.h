@@ -1,5 +1,6 @@
 #pragma once
-#include "Core.h"
+#include "Hazard/Core/Core.h"
+#include "Hazard/Core/Window.h"
 
 namespace Hazard 
 {
@@ -11,6 +12,9 @@ namespace Hazard
 		virtual ~Application();
 
 		void Run();
+	private:
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 
 	// To be defined in CLIENT

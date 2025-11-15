@@ -4,7 +4,7 @@ class Sandbox : public Hazard::Application
 {
 public:
 	Sandbox() {
-	
+		
 	}
 
 	~Sandbox() {

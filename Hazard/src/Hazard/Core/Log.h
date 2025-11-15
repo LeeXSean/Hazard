@@ -1,8 +1,8 @@
 #pragma once
 
-#include <memory>
-#include "Core.h"
+#include "Hazard/Core/Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Hazard
 {
@@ -19,6 +19,7 @@ namespace Hazard
 
 	};
 }
+
 
 #define HZ_CORE_TRACE(...)		::Hazard::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define HZ_CORE_INFO(...)		::Hazard::Log::GetCoreLogger()->info(__VA_ARGS__)

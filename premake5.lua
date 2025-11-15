@@ -11,6 +11,11 @@ workspace "Hazard"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hazard/vendor/GLFW/include"
+
+include "Hazard/vendor/GLFW"
+
 project "Hazard"
 	location "Hazard"
 	kind "SharedLib"
@@ -18,6 +23,9 @@ project "Hazard"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "hzpch.h"
+	pchsource "%{prj.name}/src/hzpch.cpp"
 
 	files
 	{
@@ -27,7 +35,15 @@ project "Hazard"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -86,9 +102,9 @@ project "Sandbox"
 	}
 
 	filter "system:windows"
+		systemversion "latest"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "latest"
 
 		defines
 		{
