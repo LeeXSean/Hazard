@@ -1,10 +1,9 @@
 #pragma once
 
 // For use by Hazard Application
-
-#include "Hazard/Application.h"
-#include "Hazard/Log.h"
+#include "Hazard/Core/Application.h"
+#include "Hazard/Core/Log.h"
 
 // ----------Entry Point-----------
-#include "Hazard/EntryPoint.h"
+#include "Hazard/Core/EntryPoint.h"
 // --------------------------------
