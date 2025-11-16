@@ -1,3 +1,6 @@
 [submodule "Hazard/vendor/spdlog"]
 	path = Hazard/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Hazard/vendor/GLFW"]
+	path = Hazard/vendor/GLFW
+	url = https://github.com/LeeXSean/glfw
