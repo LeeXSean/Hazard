@@ -1,8 +1,18 @@
 # Ignore files and directories in the .vs folder
 .vs/
+
+# Ignore Visual Studio files and folder
+**.sln
+**.vcxproj
+**.vcxproj.filters          
+**.vcxproj.user
+
 # Ignore directories
 bin/
 bin-int/
 
-#Ignore files
+# Ignore files
 *.user
+
+# !Not ignore vendor/bin/premake directory
+!vendor/bin/premake/
